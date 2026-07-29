@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Tom's Mechanical Services</title>
+<meta name="description" content="Get in touch with Tom's Mechanical Services to book a repair or maintenance appointment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <span class="brand-name">Tom's Mechanical</span>
+      <span class="brand-sub">Car Maintenance &amp; Repair</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+    <a href="contact.html" class="btn btn-primary">Get Your Appointment Today</a>
+  </nav>
+</header>
+
+<section class="section-tight" style="padding-top:56px;">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Get in touch</span>
+      <h2>Let's get your car sorted</h2>
+      <p>Send over a few details about your vehicle and what's going on, and we'll get back to you with next steps.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="contact-grid">
+
+      <div>
+        <div class="info-card">
+          <h3>Contact Details</h3>
+          <div class="info-row">
+            <span class="label">Phone</span>
+            <span class="value placeholder">[ Add phone number ]</span>
+          </div>
+          <div class="info-row">
+            <span class="label">Email</span>
+            <span class="value placeholder">[ Add email address ]</span>
+          </div>
+          <div class="info-row">
+            <span class="label">Hours</span>
+            <span class="value placeholder">[ Add business hours ]</span>
+          </div>
+          <div class="info-row">
+            <span class="label">Area</span>
+            <span class="value">North Vancouver, West Vancouver, Vancouver, Burnaby, Port Moody, Coquitlam, New Westminster</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <div class="form-note">This form isn't connected to an inbox yet — let us know when you're ready to add an email address and we'll wire it up.</div>
+        <form id="contact-form">
+          <div class="field-row">
+            <div class="field">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(604) 000-0000" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@email.com" required>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="vehicle">Vehicle (Year, Make, Model)</label>
+              <input type="text" id="vehicle" name="vehicle" placeholder="2016 Honda Civic">
+            </div>
+            <div class="field">
+              <label for="city">City</label>
+              <select id="city" name="city">
+                <option value="">Select your city</option>
+                <option>North Vancouver</option>
+                <option>West Vancouver</option>
+                <option>Vancouver</option>
+                <option>Burnaby</option>
+                <option>Port Moody</option>
+                <option>Coquitlam</option>
+                <option>New Westminster</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="message">What's going on with your car?</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us what you're noticing, or what service you need..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+          <div class="form-msg" id="form-msg">Thanks — this is a preview form. Once an email address is connected, messages sent here will reach the shop directly.</div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-name">Tom's Mechanical</span>
+        <p>Honest car maintenance and mechanical repair for the North Shore and Metro Vancouver area.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Service Area</h4>
+        <p style="margin-bottom:4px;">North &amp; West Vancouver</p>
+        <p style="margin-bottom:4px;">Vancouver &amp; Burnaby</p>
+        <p>Port Moody, Coquitlam &amp; New Westminster</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Tom's Mechanical Services</span>
+      <span>Site built for a business we're proud of</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.getElementById('form-msg').style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
