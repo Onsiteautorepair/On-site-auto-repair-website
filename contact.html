@@ -18,9 +18,9 @@
         <path d="M6 30h12l4-5h10l6 5h4" stroke="#0F2E6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         <circle cx="14" cy="34" r="3" stroke="#0F2E6B" stroke-width="2"/>
         <circle cx="34" cy="34" r="3" stroke="#0F2E6B" stroke-width="2"/>
-        <path d="M30 8l3 3-3 3M33 11h-8v6" stroke="#0F2E6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M30 8l3 3-3 3M33 11h-8v6" stroke="#E8590C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      <div class="brand-text">Onsite Auto Repair<span>Mobile Auto Repair Service</span></div>
+      <div class="brand-text">Onsite Auto Repair<span>Tom Zhang · Mobile Mechanic</span></div>
     </div>
     <nav class="nav-links" aria-label="Primary">
       <a href="index.html">Home</a>
@@ -36,9 +36,9 @@
 
 <section class="page-hero">
   <div class="wrap">
-    <p class="eyebrow on-dark">Contact</p>
-    <h1>Tell us where you're parked</h1>
-    <p>Call, email, or send your address and the issue — booking is usually confirmed within the day.</p>
+    <p class="eyebrow">Contact</p>
+    <h1>Tell Tom where you're parked</h1>
+    <p>Fill in the form and it lands straight in the inbox, or call/email directly if that's faster.</p>
   </div>
 </section>
 <div class="road-divider"></div>
@@ -46,79 +46,138 @@
 <section>
   <div class="wrap contact-grid">
 
-    <div class="contact-card">
-      <h3>Get in touch</h3>
-      <div class="contact-line">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5c0 9 7 16 16 16l3-4-6-3-2 2c-3-1-5-3-6-6l2-2-3-6-4 0z"/></svg>
-        <a href="tel:6044010478">604 401 0478</a>
-      </div>
-      <div class="contact-line">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18v12H3z"/><path d="M3 6l9 7 9-7"/></svg>
-        <a href="mailto:info@onsiteautorepair.ca">info@onsiteautorepair.ca</a>
-      </div>
-      <div class="contact-line">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/></svg>
-        <span>Mobile Service — we come to you</span>
-      </div>
+    <div class="form-card">
+      <h3>Request a booking</h3>
+      <p class="form-sub">Usually confirmed within the day.</p>
 
-      <table class="hours-table">
-        <tr><td>Mon – Fri</td><td>7:00 AM – 6:00 PM</td></tr>
-        <tr><td>Saturday</td><td>8:00 AM – 4:00 PM</td></tr>
-        <tr><td>Sunday</td><td>Closed</td></tr>
-      </table>
+      <form id="contact-form">
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="from_name" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="from_email" required>
+        </div>
+
+        <div class="field">
+          <label for="service-select">Service</label>
+          <select id="service-select" name="service">
+            <option value="">Not sure / other</option>
+            <option value="Oil & Filter">Oil &amp; Filter</option>
+            <option value="Brake Service">Brake Service</option>
+            <option value="Battery & Electrical">Battery &amp; Electrical</option>
+            <option value="Full Diagnostics">Full Diagnostics</option>
+            <option value="Pre-Purchase Inspection">Pre-Purchase Inspection</option>
+            <option value="Seasonal Tire Swap">Seasonal Tire Swap</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="message">Vehicle &amp; issue</label>
+          <textarea id="message" name="message" placeholder="Year, make, model, where it's parked, and what's going on" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary form-submit">Send request</button>
+        <p id="form-status" class="form-status"></p>
+      </form>
     </div>
 
     <div>
-      <div class="contact-note">
-        <h3>Service area</h3>
-        <p>Placeholder coverage — edit to match your real radius.</p>
-        <ul class="area-list" style="margin-top:16px;">
-          <li>Vancouver</li><li>North Vancouver</li>
-          <li>West Vancouver</li><li>Burnaby</li>
-          <li>Richmond</li><li>New Westminster</li>
-        </ul>
-      </div>
-
-      <div class="contact-note" style="margin-top:36px;">
-        <h3>Before you call</h3>
-        <ul>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
-            Have your vehicle year, make, and model ready.
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
-            Know where the vehicle will be parked for the visit.
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
-            Describe the issue — noises, warning lights, when it happens.
-          </li>
-        </ul>
+      <div class="contact-info-card">
+        <h3>Direct contact</h3>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5c0 9 7 16 16 16l3-4-6-3-2 2c-3-1-5-3-6-6l2-2-3-6-4 0z"/></svg>
+          <a href="tel:6044010478">604 401 0478</a>
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18v12H3z"/><path d="M3 6l9 7 9-7"/></svg>
+          <a href="mailto:info@onsiteautorepair.ca">info@onsiteautorepair.ca</a>
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/></svg>
+          <span>Mobile Service — we come to you</span>
+        </div>
+        <table class="hours-table">
+          <tr><td>Mon – Fri</td><td>7:00 AM – 6:00 PM</td></tr>
+          <tr><td>Saturday</td><td>8:00 AM – 4:00 PM</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
       </div>
     </div>
 
-  </div>
-</section>
-
-<section class="cta">
-  <div class="wrap">
-    <p class="eyebrow on-dark">Ready to book</p>
-    <h2>Let's get you back on the road</h2>
-    <a class="cta-phone" href="tel:6044010478">604 401 0478</a>
-    <div class="cta-buttons">
-      <a class="btn btn-primary" href="tel:6044010478">Call now</a>
-      <a class="btn btn-ghost" href="mailto:info@onsiteautorepair.ca">Email us</a>
-    </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap footer-row">
-    <span>© 2026 Onsite Auto Repair</span>
+    <span>© 2026 Onsite Auto Repair — Tom Zhang</span>
     <span><a href="tel:6044010478">604 401 0478</a> · <a href="mailto:info@onsiteautorepair.ca">info@onsiteautorepair.ca</a> · Mobile Service</span>
   </div>
 </footer>
+
+<!--
+  ── CONNECTING THIS FORM TO GMAIL ──────────────────────────────────────
+  A static page can't call the Gmail API directly (that needs a server
+  holding OAuth secrets). This form uses EmailJS instead, a service built
+  for exactly this: it sends through a Gmail account you connect yourself.
+
+  Setup (about 5 minutes, free tier is enough for a small business):
+  1. Create an account at https://www.emailjs.com
+  2. Email Services → Add New Service → Gmail → connect your Gmail account
+  3. Email Templates → create a template using these variable names,
+     which match the form fields below: from_name, from_email, phone,
+     service, message
+  4. Copy 3 values from your EmailJS dashboard and paste them into the
+     three "TODO" spots below: your Public Key, your Service ID, and
+     your Template ID.
+  5. Re-upload this file. Submissions will land in the connected Gmail
+     inbox as new emails.
+-->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  // TODO: replace with your EmailJS Public Key (Account → General)
+  emailjs.init({ publicKey: "YOUR_PUBLIC_KEY" });
+
+  // Pre-fill the service dropdown when arriving from a "Book this service" button
+  const params = new URLSearchParams(window.location.search);
+  const requestedService = params.get('service');
+  if (requestedService) {
+    const select = document.getElementById('service-select');
+    for (const option of select.options) {
+      if (option.value === requestedService) option.selected = true;
+    }
+  }
+
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    status.classList.remove('error');
+    status.textContent = 'Sending…';
+
+    emailjs.sendForm(
+      'YOUR_SERVICE_ID',   // TODO: replace with your EmailJS Service ID
+      'YOUR_TEMPLATE_ID',  // TODO: replace with your EmailJS Template ID
+      form
+    ).then(function () {
+      status.textContent = "Sent — we'll get back to you shortly.";
+      form.reset();
+    }).catch(function (err) {
+      status.classList.add('error');
+      status.textContent = "Something went wrong — please call or email us directly.";
+      console.error(err);
+    });
+  });
+</script>
 
 </body>
 </html>

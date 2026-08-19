@@ -18,9 +18,9 @@
         <path d="M6 30h12l4-5h10l6 5h4" stroke="#0F2E6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         <circle cx="14" cy="34" r="3" stroke="#0F2E6B" stroke-width="2"/>
         <circle cx="34" cy="34" r="3" stroke="#0F2E6B" stroke-width="2"/>
-        <path d="M30 8l3 3-3 3M33 11h-8v6" stroke="#0F2E6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M30 8l3 3-3 3M33 11h-8v6" stroke="#E8590C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      <div class="brand-text">Onsite Auto Repair<span>Mobile Auto Repair Service</span></div>
+      <div class="brand-text">Onsite Auto Repair<span>Tom Zhang · Mobile Mechanic</span></div>
     </div>
     <nav class="nav-links" aria-label="Primary">
       <a href="index.html" aria-current="page">Home</a>
@@ -37,9 +37,9 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <p class="eyebrow on-dark">Mobile Auto Repair · Metro Vancouver</p>
-      <h1>Your garage<br>is wherever<br>you park.</h1>
-      <p class="sub">We drive the shop to your driveway, office lot, or roadside — full diagnostics and repair, done on-site, so you're not stuck waiting at a shop.</p>
+      <p class="eyebrow">Mobile Auto Repair · Metro Vancouver</p>
+      <h1>Your garage<br>is wherever<br>you <span class="accent">park.</span></h1>
+      <p class="sub">Tom drives the shop to your driveway, office lot, or roadside — full diagnostics and repair, done on-site, so you're not stuck waiting at a shop.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="tel:6044010478">Call 604 401 0478</a>
         <a class="btn btn-ghost" href="contact.html">Book a visit</a>
@@ -57,12 +57,32 @@
           M120 210a14 14 0 1 0 0.1 0M290 210a14 14 0 1 0 0.1 0
           M150 155h100
           M235 60l14 14-14 14M262 74h-38v28"
-          stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          stroke="#FAFAF8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </div>
   </div>
 </section>
 <div class="road-divider"></div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Services</p>
+      <h2>Common jobs, done in your driveway</h2>
+      <p>A few of the most-booked jobs — see the full list and prices on the services page.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="services-grid">
+      <div class="service-card"><p class="num">01</p><h3>Oil &amp; Filter</h3><p>Full synthetic or conventional, done at your curb in under an hour.</p></div>
+      <div class="service-card"><p class="num">02</p><h3>Brake Service</h3><p>Pads, rotors, and fluid — inspected and replaced on-site.</p></div>
+      <div class="service-card"><p class="num">03</p><h3>Full Diagnostics</h3><p>Check-engine lights and drivability issues, read and explained plainly.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:36px;">
+      <a class="btn btn-ghost dark" href="services.html">View all services</a>
+    </div>
+  </div>
+</section>
 
 <section class="how">
   <div class="wrap">
@@ -71,10 +91,30 @@
       <h2>Four steps, zero tow trucks</h2>
     </div>
     <div class="steps">
-      <div class="step"><div class="step-marker">01</div><h3>Call or book</h3><p>Tell us what's wrong and where you're parked.</p></div>
-      <div class="step"><div class="step-marker">02</div><h3>We drive to you</h3><p>Fully equipped mobile setup, no shop visit needed.</p></div>
+      <div class="step"><div class="step-marker">01</div><h3>Call or book</h3><p>Tell Tom what's wrong and where you're parked.</p></div>
+      <div class="step"><div class="step-marker">02</div><h3>He drives to you</h3><p>Fully equipped mobile setup, no shop visit needed.</p></div>
       <div class="step"><div class="step-marker">03</div><h3>Diagnose &amp; fix</h3><p>Most jobs completed same-visit, on the spot.</p></div>
       <div class="step"><div class="step-marker">04</div><h3>Back on the road</h3><p>You get your time back — no waiting room.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="area">
+  <div class="wrap area-grid">
+    <div>
+      <p class="eyebrow">Service Area</p>
+      <h2>Where Tom drives</h2>
+      <p style="color:#3c4a63;margin-top:12px;">Placeholder coverage list — edit to match your real radius.</p>
+      <ul class="area-list">
+        <li>Vancouver</li><li>North Vancouver</li>
+        <li>West Vancouver</li><li>Burnaby</li>
+        <li>Richmond</li><li>New Westminster</li>
+      </ul>
+    </div>
+    <div class="area-visual">
+      <div class="ring r1"></div>
+      <div class="ring r2"></div>
+      <div class="center"></div>
     </div>
   </div>
 </section>
@@ -85,20 +125,22 @@
   <div class="trust-item"><p class="fig">Upfront</p><p>Pricing explained before any work starts.</p></div>
 </div>
 
-<section>
-  <div class="wrap" style="text-align:center;">
-    <p class="eyebrow">Explore</p>
-    <h2 style="margin-top:8px;font-size:clamp(26px,3.4vw,34px);">See what we cover, or reach out directly</h2>
-    <div class="cta-buttons" style="margin-top:26px;">
-      <a class="btn btn-primary on-light" href="services.html">View services</a>
-      <a class="btn btn-ghost dark" href="contact.html">Contact us</a>
+<section class="cta" id="contact">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--signal);">Get in touch</p>
+    <h2>Tell Tom where you're parked.</h2>
+    <p>Call, email, or send your address and the issue — booking usually confirmed within the day.</p>
+    <a class="cta-phone" href="tel:6044010478">604 401 0478</a>
+    <div class="cta-buttons">
+      <a class="btn btn-primary" href="tel:6044010478">Call now</a>
+      <a class="btn btn-ghost" href="contact.html">Go to contact page</a>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap footer-row">
-    <span>© 2026 Onsite Auto Repair</span>
+    <span>© 2026 Onsite Auto Repair — Tom Zhang</span>
     <span><a href="tel:6044010478">604 401 0478</a> · <a href="mailto:info@onsiteautorepair.ca">info@onsiteautorepair.ca</a> · Mobile Service</span>
   </div>
 </footer>
