@@ -3,143 +3,122 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | Onsite Auto Repair</title>
-<meta name="description" content="Schedule on-site vehicle maintenance and repair with Onsite Auto Repair — no shop visit required.">
+<title>Contact — Onsite Auto Repair</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="site-header">
-  <nav class="nav">
-    <a href="index.html" class="brand">
-      <span class="brand-name">Onsite Auto Repair</span>
-      <span class="brand-sub">On-Site Vehicle Repair &amp; Maintenance</span>
-    </a>
-    <div class="nav-links">
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M6 30h12l4-5h10l6 5h4" stroke="#0F2E6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="14" cy="34" r="3" stroke="#0F2E6B" stroke-width="2"/>
+        <circle cx="34" cy="34" r="3" stroke="#0F2E6B" stroke-width="2"/>
+        <path d="M30 8l3 3-3 3M33 11h-8v6" stroke="#0F2E6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="brand-text">Onsite Auto Repair<span>Mobile Auto Repair Service</span></div>
+    </div>
+    <nav class="nav-links" aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
-      <a href="contact.html" class="active">Contact</a>
-    </div>
-    <a href="contact.html" class="btn btn-primary">Schedule On-Site Service</a>
-  </nav>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <a class="nav-phone" href="tel:6044010478" aria-label="Call 604 401 0478">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5c0 9 7 16 16 16l3-4-6-3-2 2c-3-1-5-3-6-6l2-2-3-6-4 0z"/></svg>
+      <span>Call</span> 604 401 0478
+    </a>
+  </div>
 </header>
 
-<section class="section-tight" style="padding-top:56px;">
+<section class="page-hero">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Get in touch</span>
-      <h2>Let's schedule your on-site service</h2>
-      <p>Tell us about your vehicle or fleet and where you're located, and we'll get back to you with next steps — no shop visit required.</p>
+    <p class="eyebrow on-dark">Contact</p>
+    <h1>Tell us where you're parked</h1>
+    <p>Call, email, or send your address and the issue — booking is usually confirmed within the day.</p>
+  </div>
+</section>
+<div class="road-divider"></div>
+
+<section>
+  <div class="wrap contact-grid">
+
+    <div class="contact-card">
+      <h3>Get in touch</h3>
+      <div class="contact-line">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5c0 9 7 16 16 16l3-4-6-3-2 2c-3-1-5-3-6-6l2-2-3-6-4 0z"/></svg>
+        <a href="tel:6044010478">604 401 0478</a>
+      </div>
+      <div class="contact-line">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18v12H3z"/><path d="M3 6l9 7 9-7"/></svg>
+        <a href="mailto:info@onsiteautorepair.ca">info@onsiteautorepair.ca</a>
+      </div>
+      <div class="contact-line">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/></svg>
+        <span>Mobile Service — we come to you</span>
+      </div>
+
+      <table class="hours-table">
+        <tr><td>Mon – Fri</td><td>7:00 AM – 6:00 PM</td></tr>
+        <tr><td>Saturday</td><td>8:00 AM – 4:00 PM</td></tr>
+        <tr><td>Sunday</td><td>Closed</td></tr>
+      </table>
+    </div>
+
+    <div>
+      <div class="contact-note">
+        <h3>Service area</h3>
+        <p>Placeholder coverage — edit to match your real radius.</p>
+        <ul class="area-list" style="margin-top:16px;">
+          <li>Vancouver</li><li>North Vancouver</li>
+          <li>West Vancouver</li><li>Burnaby</li>
+          <li>Richmond</li><li>New Westminster</li>
+        </ul>
+      </div>
+
+      <div class="contact-note" style="margin-top:36px;">
+        <h3>Before you call</h3>
+        <ul>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+            Have your vehicle year, make, and model ready.
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+            Know where the vehicle will be parked for the visit.
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+            Describe the issue — noises, warning lights, when it happens.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <p class="eyebrow on-dark">Ready to book</p>
+    <h2>Let's get you back on the road</h2>
+    <a class="cta-phone" href="tel:6044010478">604 401 0478</a>
+    <div class="cta-buttons">
+      <a class="btn btn-primary" href="tel:6044010478">Call now</a>
+      <a class="btn btn-ghost" href="mailto:info@onsiteautorepair.ca">Email us</a>
     </div>
   </div>
 </section>
 
-<section class="section" style="padding-top:0;">
-  <div class="wrap">
-    <div class="contact-grid">
-
-      <div>
-        <div class="info-card">
-          <h3>Contact Details</h3>
-          <div class="info-row">
-            <span class="label">Phone</span>
-            <span class="value">(778) 316-4458</span>
-          </div>
-          <div class="info-row">
-            <span class="label">Email</span>
-            <span class="value">info@onsiteautorepair.ca</span>
-          </div>
-          <div class="info-row">
-            <span class="label">Area</span>
-            <span class="value">North Vancouver, West Vancouver, Vancouver, Burnaby, Port Moody, Coquitlam, New Westminster</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="form-card">
-        <div class="form-note">This form isn't connected to an inbox yet — let us know when you're ready to add an email address and we'll wire it up.</div>
-        <form id="contact-form">
-          <div class="field-row">
-            <div class="field">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" placeholder="Jane Smith" required>
-            </div>
-            <div class="field">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" placeholder="(604) 000-0000" required>
-            </div>
-          </div>
-          <div class="field">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="you@email.com" required>
-          </div>
-          <div class="field-row">
-            <div class="field">
-              <label for="vehicle">Vehicle / Fleet (Year, Make, Model)</label>
-              <input type="text" id="vehicle" name="vehicle" placeholder="e.g. 2016 Honda Civic, or fleet size">
-            </div>
-            <div class="field">
-              <label for="city">City</label>
-              <select id="city" name="city">
-                <option value="">Select your city</option>
-                <option>North Vancouver</option>
-                <option>West Vancouver</option>
-                <option>Vancouver</option>
-                <option>Burnaby</option>
-                <option>Port Moody</option>
-                <option>Coquitlam</option>
-                <option>New Westminster</option>
-              </select>
-            </div>
-          </div>
-          <div class="field">
-            <label for="message">What's going on with your car?</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell us what's going on, and where you're located..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-          <div class="form-msg" id="form-msg">Thanks — this is a preview form. Once an email address is connected, messages sent here will reach the shop directly.</div>
-        </form>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <span class="brand-name">Onsite Auto Repair</span>
-        <p>On-site vehicle maintenance and repair for businesses across the North Shore and Metro Vancouver area — keeping your operations moving, wherever you are.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Site</h4>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="footer-col">
-        <h4>Service Area</h4>
-        <p style="margin-bottom:4px;">North &amp; West Vancouver</p>
-        <p style="margin-bottom:4px;">Vancouver &amp; Burnaby</p>
-        <p>Port Moody, Coquitlam &amp; New Westminster</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 Onsite Auto Repair</span>
-      <span>Site built for a business we're proud of</span>
-    </div>
+<footer>
+  <div class="wrap footer-row">
+    <span>© 2026 Onsite Auto Repair</span>
+    <span><a href="tel:6044010478">604 401 0478</a> · <a href="mailto:info@onsiteautorepair.ca">info@onsiteautorepair.ca</a> · Mobile Service</span>
   </div>
 </footer>
-
-<script>
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    document.getElementById('form-msg').style.display = 'block';
-  });
-</script>
 
 </body>
 </html>

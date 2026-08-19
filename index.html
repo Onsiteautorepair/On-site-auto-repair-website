@@ -7,216 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --navy-900:#081B42;
-    --navy-700:#0F2E6B;
-    --blue-500:#3B6EA8;
-    --signal:#E8590C;
-    --paper:#FAFAF8;
-    --line:#D8DCE3;
-    --font-display:'Oswald', sans-serif;
-    --font-body:'Inter', sans-serif;
-    --font-mono:'IBM Plex Mono', monospace;
-  }
-
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    font-family:var(--font-body);
-    background:var(--paper);
-    color:var(--navy-900);
-    line-height:1.5;
-    -webkit-font-smoothing:antialiased;
-  }
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto;}
-    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
-  }
-
-  a{color:inherit;text-decoration:none;}
-  img,svg{display:block;max-width:100%;}
-  .wrap{max-width:1120px;margin:0 auto;padding:0 28px;}
-  .eyebrow{
-    font-family:var(--font-mono);
-    font-size:12px;
-    letter-spacing:0.18em;
-    text-transform:uppercase;
-    color:var(--blue-500);
-    font-weight:600;
-  }
-  h1,h2,h3{font-family:var(--font-display);text-transform:uppercase;color:var(--navy-900);letter-spacing:0.01em;}
-  .btn{
-    display:inline-flex;align-items:center;gap:10px;
-    font-family:var(--font-mono);font-weight:600;font-size:14px;letter-spacing:0.03em;
-    padding:14px 26px;border-radius:2px;border:2px solid transparent;
-    transition:transform .15s ease, box-shadow .15s ease;
-  }
-  .btn:focus-visible, a:focus-visible, button:focus-visible{
-    outline:3px solid var(--signal); outline-offset:3px;
-  }
-  .btn-primary{background:var(--signal);color:var(--paper);}
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(232,89,12,.35);}
-  .btn-ghost{background:transparent;border-color:rgba(250,250,248,.4);color:var(--paper);}
-  .btn-ghost:hover{border-color:var(--paper);}
-  .btn-ghost.dark{border-color:var(--navy-700);color:var(--navy-700);}
-  .btn-ghost.dark:hover{background:var(--navy-700);color:var(--paper);}
-
-  /* road-lane divider — signature structural device */
-  .road-divider{
-    height:3px;width:100%;
-    background-image:repeating-linear-gradient(90deg, var(--navy-700) 0 28px, transparent 28px 46px);
-    opacity:.55;
-  }
-  .road-divider.light{background-image:repeating-linear-gradient(90deg, var(--paper) 0 28px, transparent 28px 46px); opacity:.35;}
-
-  /* header */
-  header{
-    position:sticky;top:0;z-index:50;
-    background:rgba(250,250,248,.92);backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--line);
-  }
-  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0;}
-  .brand{display:flex;align-items:center;gap:12px;}
-  .brand svg{width:34px;height:34px;}
-  .brand-text{font-family:var(--font-display);font-weight:600;font-size:19px;letter-spacing:0.02em;color:var(--navy-900);}
-  .brand-text span{display:block;font-family:var(--font-mono);font-size:10px;letter-spacing:0.16em;color:var(--blue-500);font-weight:600;}
-  .nav-phone{
-    font-family:var(--font-mono);font-weight:600;font-size:15px;color:var(--navy-900);
-    display:flex;align-items:center;gap:8px;
-  }
-  .nav-phone svg{width:16px;height:16px;stroke:var(--signal);}
-
-  /* hero */
-  .hero{
-    background:var(--navy-700);
-    color:var(--paper);
-    padding:88px 0 72px;
-    position:relative;
-    overflow:hidden;
-  }
-  .hero::after{
-    content:"";position:absolute;inset:0;
-    background-image:linear-gradient(180deg, rgba(8,27,66,0) 40%, var(--navy-900) 100%);
-    opacity:.5;pointer-events:none;
-  }
-  .hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center;position:relative;z-index:1;}
-  .hero h1{font-size:clamp(40px,6vw,68px);line-height:0.98;font-weight:700;}
-  .hero h1 .accent{color:var(--signal);}
-  .hero p.sub{
-    font-size:18px;max-width:46ch;margin-top:20px;color:rgba(250,250,248,.85);
-  }
-  .hero-ctas{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;}
-  .hero-tags{display:flex;gap:22px;margin-top:44px;flex-wrap:wrap;}
-  .hero-tag{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;color:rgba(250,250,248,.7);display:flex;align-items:center;gap:8px;}
-  .hero-tag .dot{width:6px;height:6px;background:var(--signal);border-radius:50%;}
-
-  .hero-art{display:flex;justify-content:center;align-items:center;}
-  .hero-art svg{width:100%;max-width:380px;}
-  .draw-path{
-    stroke-dasharray:900;
-    stroke-dashoffset:900;
-    animation:draw 2.1s ease forwards .25s;
-  }
-  @keyframes draw{to{stroke-dashoffset:0;}}
-  @media (prefers-reduced-motion: reduce){
-    .draw-path{stroke-dashoffset:0;animation:none;}
-  }
-
-  /* sections */
-  section{padding:76px 0;}
-  .section-head{max-width:640px;margin-bottom:44px;}
-  .section-head h2{font-size:clamp(28px,3.6vw,38px);margin-top:8px;}
-  .section-head p{color:#3c4a63;margin-top:12px;font-size:16px;}
-
-  /* services */
-  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
-  .service-card{
-    background:var(--paper);padding:30px 26px;
-    transition:background .15s ease;
-  }
-  .service-card:hover{background:#F0F3F8;}
-  .service-card .num{font-family:var(--font-mono);font-size:12px;color:var(--blue-500);font-weight:600;}
-  .service-card h3{font-size:19px;margin-top:14px;letter-spacing:0.01em;}
-  .service-card p{font-size:14.5px;color:#4a5670;margin-top:8px;}
-
-  /* how it works — real sequence */
-  .how{background:var(--navy-900);color:var(--paper);}
-  .how .section-head p{color:rgba(250,250,248,.7);}
-  .how .eyebrow{color:var(--signal);}
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;}
-  .step{position:relative;padding:0 20px 0 0;}
-  .step:not(:last-child)::after{
-    content:"";position:absolute;top:20px;right:-2px;width:100%;height:2px;
-    background-image:repeating-linear-gradient(90deg, var(--signal) 0 10px, transparent 10px 18px);
-    z-index:0;
-  }
-  .step-marker{
-    width:40px;height:40px;border-radius:50%;border:2px solid var(--signal);
-    display:flex;align-items:center;justify-content:center;
-    font-family:var(--font-mono);font-weight:600;color:var(--signal);
-    background:var(--navy-900);position:relative;z-index:1;
-  }
-  .step h3{font-size:17px;margin-top:18px;}
-  .step p{font-size:14px;color:rgba(250,250,248,.65);margin-top:8px;}
-
-  /* service area */
-  .area-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
-  .area-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px 24px;margin-top:18px;}
-  .area-list li{
-    font-family:var(--font-mono);font-size:14px;color:var(--navy-900);
-    padding:10px 0;border-bottom:1px dashed var(--line);
-  }
-  .area-visual{
-    aspect-ratio:1/1;border:2px solid var(--navy-700);border-radius:50%;
-    display:flex;align-items:center;justify-content:center;position:relative;
-    background:radial-gradient(circle at center, rgba(15,46,107,.06), transparent 70%);
-  }
-  .area-visual .ring{position:absolute;border:1px dashed rgba(15,46,107,.35);border-radius:50%;}
-  .area-visual .ring.r1{inset:18%;}
-  .area-visual .ring.r2{inset:36%;}
-  .area-visual .center{
-    width:14px;height:14px;background:var(--signal);border-radius:50%;
-    box-shadow:0 0 0 8px rgba(232,89,12,.15);
-  }
-
-  /* trust strip */
-  .trust{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-  .trust-item{background:var(--paper);padding:34px 28px;}
-  .trust-item .fig{font-family:var(--font-display);font-size:30px;color:var(--navy-700);}
-  .trust-item p{font-size:13.5px;color:#4a5670;margin-top:6px;}
-
-  /* CTA / contact */
-  .cta{background:var(--navy-700);color:var(--paper);text-align:center;}
-  .cta h2{font-size:clamp(30px,5vw,46px);}
-  .cta p{color:rgba(250,250,248,.8);margin-top:14px;max-width:52ch;margin-inline:auto;}
-  .cta-phone{
-    font-family:var(--font-mono);font-size:clamp(30px,6vw,44px);font-weight:600;
-    color:var(--signal);display:block;margin-top:30px;letter-spacing:.02em;
-  }
-  .cta-buttons{display:flex;gap:14px;justify-content:center;margin-top:28px;flex-wrap:wrap;}
-
-  footer{background:var(--navy-900);color:rgba(250,250,248,.6);padding:36px 0;}
-  .footer-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-family:var(--font-mono);font-size:12.5px;}
-  .footer-row a{color:rgba(250,250,248,.8);}
-  .footer-row a:hover{color:var(--signal);}
-
-  @media (max-width:860px){
-    .hero-grid{grid-template-columns:1fr;}
-    .hero-art{order:-1;}
-    .services-grid{grid-template-columns:1fr 1fr;}
-    .steps{grid-template-columns:1fr 1fr;row-gap:36px;}
-    .step:not(:last-child)::after{display:none;}
-    .area-grid{grid-template-columns:1fr;}
-    .trust{grid-template-columns:1fr;}
-  }
-  @media (max-width:560px){
-    .services-grid{grid-template-columns:1fr;}
-    .steps{grid-template-columns:1fr;}
-    .area-list{grid-template-columns:1fr;}
-    .nav-phone span{display:none;}
-  }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -227,10 +18,15 @@
         <path d="M6 30h12l4-5h10l6 5h4" stroke="#0F2E6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         <circle cx="14" cy="34" r="3" stroke="#0F2E6B" stroke-width="2"/>
         <circle cx="34" cy="34" r="3" stroke="#0F2E6B" stroke-width="2"/>
-        <path d="M30 8l3 3-3 3M33 11h-8v6" stroke="#E8590C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M30 8l3 3-3 3M33 11h-8v6" stroke="#0F2E6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      <div class="brand-text">Onsite Auto Repair<span>Tom Zhang · Mobile Mechanic</span></div>
+      <div class="brand-text">Onsite Auto Repair<span>Mobile Auto Repair Service</span></div>
     </div>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
     <a class="nav-phone" href="tel:6044010478" aria-label="Call 604 401 0478">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5c0 9 7 16 16 16l3-4-6-3-2 2c-3-1-5-3-6-6l2-2-3-6-4 0z"/></svg>
       <span>Call</span> 604 401 0478
@@ -241,12 +37,12 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <p class="eyebrow">Mobile Auto Repair · Metro Vancouver</p>
-      <h1>Your garage<br>is wherever<br>you <span class="accent">park.</span></h1>
-      <p class="sub">Tom drives the shop to your driveway, office lot, or roadside — full diagnostics and repair, done on-site, so you're not stuck waiting at a shop.</p>
+      <p class="eyebrow on-dark">Mobile Auto Repair · Metro Vancouver</p>
+      <h1>Your garage<br>is wherever<br>you park.</h1>
+      <p class="sub">We drive the shop to your driveway, office lot, or roadside — full diagnostics and repair, done on-site, so you're not stuck waiting at a shop.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="tel:6044010478">Call 604 401 0478</a>
-        <a class="btn btn-ghost" href="#contact">Book a visit</a>
+        <a class="btn btn-ghost" href="contact.html">Book a visit</a>
       </div>
       <div class="hero-tags">
         <div class="hero-tag"><span class="dot"></span>We come to you</div>
@@ -261,32 +57,12 @@
           M120 210a14 14 0 1 0 0.1 0M290 210a14 14 0 1 0 0.1 0
           M150 155h100
           M235 60l14 14-14 14M262 74h-38v28"
-          stroke="#FAFAF8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </div>
   </div>
 </section>
 <div class="road-divider"></div>
-
-<section id="services">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Services</p>
-      <h2>Common jobs, done in your driveway</h2>
-      <p>Placeholder line-up below — swap in your real service list and prices; these are just structured so you can edit fast.</p>
-    </div>
-  </div>
-  <div class="wrap">
-    <div class="services-grid">
-      <div class="service-card"><p class="num">01</p><h3>Oil &amp; Filter</h3><p>Full synthetic or conventional, done at your curb in under an hour.</p></div>
-      <div class="service-card"><p class="num">02</p><h3>Brake Service</h3><p>Pads, rotors, and fluid — inspected and replaced on-site.</p></div>
-      <div class="service-card"><p class="num">03</p><h3>Battery &amp; Electrical</h3><p>Testing, replacement, and no-start diagnosis.</p></div>
-      <div class="service-card"><p class="num">04</p><h3>Full Diagnostics</h3><p>Check-engine lights and drivability issues, read and explained plainly.</p></div>
-      <div class="service-card"><p class="num">05</p><h3>Pre-Purchase Inspection</h3><p>Buying used? Get an honest read before you sign.</p></div>
-      <div class="service-card"><p class="num">06</p><h3>Seasonal Tire Swap</h3><p>Summer/winter changeover, no shop appointment needed.</p></div>
-    </div>
-  </div>
-</section>
 
 <section class="how">
   <div class="wrap">
@@ -295,30 +71,10 @@
       <h2>Four steps, zero tow trucks</h2>
     </div>
     <div class="steps">
-      <div class="step"><div class="step-marker">01</div><h3>Call or book</h3><p>Tell Tom what's wrong and where you're parked.</p></div>
-      <div class="step"><div class="step-marker">02</div><h3>He drives to you</h3><p>Fully equipped mobile setup, no shop visit needed.</p></div>
+      <div class="step"><div class="step-marker">01</div><h3>Call or book</h3><p>Tell us what's wrong and where you're parked.</p></div>
+      <div class="step"><div class="step-marker">02</div><h3>We drive to you</h3><p>Fully equipped mobile setup, no shop visit needed.</p></div>
       <div class="step"><div class="step-marker">03</div><h3>Diagnose &amp; fix</h3><p>Most jobs completed same-visit, on the spot.</p></div>
       <div class="step"><div class="step-marker">04</div><h3>Back on the road</h3><p>You get your time back — no waiting room.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="area">
-  <div class="wrap area-grid">
-    <div>
-      <p class="eyebrow">Service Area</p>
-      <h2>Where Tom drives</h2>
-      <p style="color:#3c4a63;margin-top:12px;">Placeholder coverage list — edit to match your real radius.</p>
-      <ul class="area-list">
-        <li>Vancouver</li><li>North Vancouver</li>
-        <li>West Vancouver</li><li>Burnaby</li>
-        <li>Richmond</li><li>New Westminster</li>
-      </ul>
-    </div>
-    <div class="area-visual">
-      <div class="ring r1"></div>
-      <div class="ring r2"></div>
-      <div class="center"></div>
     </div>
   </div>
 </section>
@@ -329,22 +85,20 @@
   <div class="trust-item"><p class="fig">Upfront</p><p>Pricing explained before any work starts.</p></div>
 </div>
 
-<section class="cta" id="contact">
-  <div class="wrap">
-    <p class="eyebrow" style="color:var(--signal);">Get in touch</p>
-    <h2>Tell Tom where you're parked.</h2>
-    <p>Call, email, or send your address and the issue — booking usually confirmed within the day.</p>
-    <a class="cta-phone" href="tel:6044010478">604 401 0478</a>
-    <div class="cta-buttons">
-      <a class="btn btn-primary" href="tel:6044010478">Call now</a>
-      <a class="btn btn-ghost" href="mailto:info@onsiteautorepair.ca">Email info@onsiteautorepair.ca</a>
+<section>
+  <div class="wrap" style="text-align:center;">
+    <p class="eyebrow">Explore</p>
+    <h2 style="margin-top:8px;font-size:clamp(26px,3.4vw,34px);">See what we cover, or reach out directly</h2>
+    <div class="cta-buttons" style="margin-top:26px;">
+      <a class="btn btn-primary on-light" href="services.html">View services</a>
+      <a class="btn btn-ghost dark" href="contact.html">Contact us</a>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap footer-row">
-    <span>© 2026 Onsite Auto Repair — Tom Zhang</span>
+    <span>© 2026 Onsite Auto Repair</span>
     <span><a href="tel:6044010478">604 401 0478</a> · <a href="mailto:info@onsiteautorepair.ca">info@onsiteautorepair.ca</a> · Mobile Service</span>
   </div>
 </footer>
