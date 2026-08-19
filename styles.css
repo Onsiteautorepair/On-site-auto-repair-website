@@ -149,6 +149,37 @@ section{padding:76px 0;}
 }
 .service-card .book-btn{margin-top:14px;align-self:flex-start;}
 
+/* services list — icon beside description, button beside price */
+.services-list{border-top:1px solid var(--line);}
+.service-row{
+  display:flex;align-items:center;gap:28px;
+  padding:28px 0;border-bottom:1px solid var(--line);
+}
+.service-row:hover{background:#F5F7FA;}
+.service-icon{
+  width:60px;height:60px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--paper);border:1px solid var(--line);border-radius:50%;
+}
+.service-icon svg{width:32px;height:32px;stroke:var(--navy-700);fill:none;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round;}
+.service-body{flex-grow:1;min-width:0;}
+.service-body .num{font-family:var(--font-mono);font-size:11px;color:var(--blue-500);font-weight:600;letter-spacing:.06em;}
+.service-body h3{font-size:19px;margin-top:6px;letter-spacing:0.01em;}
+.service-body p{font-size:14.5px;color:#4a5670;margin-top:6px;max-width:52ch;}
+.service-actions{
+  flex-shrink:0;display:flex;flex-direction:column;align-items:flex-end;justify-content:center;gap:12px;
+  min-width:150px;align-self:stretch;
+}
+.service-actions .price{font-family:var(--font-mono);font-size:14px;color:var(--navy-700);font-weight:600;}
+@media (max-width:700px){
+  .service-row{flex-wrap:wrap;}
+  .service-actions{flex-direction:row;align-items:center;justify-content:space-between;width:100%;margin-left:88px;min-width:0;}
+}
+@media (max-width:520px){
+  .service-row{gap:16px;}
+  .service-actions{margin-left:0;}
+}
+
 /* how it works — real sequence */
 .how{background:var(--navy-900);color:var(--paper);}
 .how .section-head p{color:rgba(250,250,248,.7);}
